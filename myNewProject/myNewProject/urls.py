@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.home_page, name='home'),
     path('about/', views.about_page, name='about'),
     path('contact/', views.contact_page, name='contact'),
-    path('pokemonhome/', include('pokemon.urls')),
+    # this is for routing for pokemon application urls
+    path('pokemon/', include('pokemon.urls')),
 
 ]

@@ -1,0 +1,7 @@
+Install tailwind if you have created virtual environment using uv
+    -- uv pip install django-tailwind
+
+If you are facing issues during installation then:
+    need to install pip inside virtual environment
+    -- python -m ensurepip upgrade
+    -- python -m install pip upgrade pip

@@ -1,3 +1,6 @@
+{% extends "layout.html" %}
+
+{% comment %} 
 <!-- To load static assets -->
 {% load static %}
 <!DOCTYPE html>
@@ -13,3 +16,14 @@
   <h1>Welcome to my Home Page</h1>  
 </body>
 </html>
+{% endcomment %}
+
+
+
+{% block title %} 
+Homepage
+{% endblock  %}
+
+{% block content %}
+<h1>Welcome To my MAIN HOME PAGE</h1>
+{% endblock  %}
