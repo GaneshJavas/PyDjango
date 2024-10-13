@@ -1,7 +1,39 @@
 Install tailwind if you have created virtual environment using uv
     -- uv pip install django-tailwind
+    ELSE
+    -- python -m pip install django-tailwind
 
 If you are facing issues during installation then:
     need to install pip inside virtual environment
-    -- python -m ensurepip upgrade
-    -- python -m install pip upgrade pip
+    -- python -m ensurepip --upgrade
+    -- python -m pip install --upgrade pip
+
+Reload packages
+    -- pip install 'django-tailwind[reload]'
+
+Add 'tailwind' to INSTALLED_APPS in settings.py:
+
+INSTALLED_APPS = [
+  # other Django apps
+  'tailwind',
+]
+
+Create a Tailwind CSS compatible Django app, I like to call it theme:
+    -- python manage.py tailwind init
+
+Add your newly created 'theme' app to INSTALLED_APPS in settings.py:
+
+INSTALLED_APPS = [
+  # other Django apps
+  'tailwind',
+  'theme'
+]
+
+Adding the following line to settings.py file:
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+Install Tailwind CSS dependencies
+    -- python manage.py tailwind install
