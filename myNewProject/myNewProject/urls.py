@@ -25,4 +25,6 @@ urlpatterns = [
     # this is for routing for pokemon application urls
     path('pokemon/', include('pokemon.urls')),
 
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]

@@ -37,3 +37,30 @@ INTERNAL_IPS = [
 
 Install Tailwind CSS dependencies
     -- python manage.py tailwind install
+
+// For Windows
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+// For Mac/Linux 
+NPM_BIN_PATH = '/usr/local/bin/npm'
+
+Add it to your INSTALLED_APPS in your settings.py file:
+INSTALLED_APPS = [
+    # ...
+    'django_browser_reload',
+    #...
+]
+
+Add following code to your settings.py file:
+MIDDLEWARE = [
+  # ...
+  "django_browser_reload.middleware.BrowserReloadMiddleware",
+  # ...
+]
+
+Add following code to your urls.py file:
+from django.urls import include, path
+urlpatterns = [
+    ...,
+    path("__reload__/", include("django_browser_reload.urls")),
+]

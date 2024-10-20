@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pokemon',
     'tailwind',
     'theme',
+    'django_browser_reload',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'myNewProject.urls'
@@ -126,6 +128,8 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+NPM_BIN_PATH = "/Users/jaiganesh/.nvm/versions/node/v22.5.1/bin/npm"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
