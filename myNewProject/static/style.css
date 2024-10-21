@@ -6,8 +6,9 @@ body{
 h1{
     text-align: center;
     font-size: 2em;
+    
 }
 .navbar{
     text-align: left;
-    background-color: yellow;
+    background-color: pink;
 }

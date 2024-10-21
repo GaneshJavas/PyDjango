@@ -1,14 +1,9 @@
+{% extends "layout.html" %}
 
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My About Page</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <h1>Welcome to My About Page</h1>
-</body>
-</html>
+{% block title %} 
+About
+{% endblock  %}
+
+{% block content %}
+<h1>  To my MAIN About Page</h1>
+{% endblock  %}
