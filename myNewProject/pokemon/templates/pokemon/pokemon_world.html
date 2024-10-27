@@ -21,5 +21,21 @@ Homepage
 {% endblock  %}
 
 {% block content %}
-<h1>Welcome To my POKEMON WORLD</h1>
+<h1 class= "text-left text-5xl text-yellow-500 font-serif">Welcome To my POKEMON WORLD</h1>
+
+<div class="grid grid-cols-5 gap-4 m-4">
+
+{% for pokemon in pokemons  %}
+    <div class="bg-gray-200 content-center place-items-center p-4">
+        <img class="rounded shadow-lg " src="{{pokemon.pimage.url}}" alt="{{pokemon.name}}">
+        <h3 class="text-blue-500 text-2xl font-bold font-serif text-center">Name - {{pokemon.name}}</h3>
+        <a href="#">
+            <button type="button" class="inline-flex items-center w-[200%] justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500" >
+                {{pokemon.poke_type}} - {{pokemon.id}}
+            </button>
+
+        </a>
+    </div>
+{% endfor %}
+</div>
 {% endblock  %}
