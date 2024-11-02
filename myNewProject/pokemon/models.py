@@ -18,6 +18,7 @@ class PokemonViewer(models.Model):
     pimage = models.ImageField(upload_to='pokeimg/')
     dob = models.DateTimeField(default=timezone.now)
     poke_type = models.CharField(max_length=2, choices=pokemon_type_choice,default='')
+    description = models.TextField(default='')
 
     def __str__(self):
         return self.name
