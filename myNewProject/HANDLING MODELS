@@ -3,3 +3,12 @@ Relationships in SQL
 2. Many to Many
 3. 1 to 1
 
+1 to Many
+    1 girl - 100 boys approaching 
+    1 boy - 100 girls approaching
+    100 products
+    1 product - 100 customer ratings 
+
+Many to Many
+    Physics Tuition, Bio Tuition, Maths Tuition
+    1,2,3,4 
