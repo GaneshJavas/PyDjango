@@ -1,0 +1,24 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+    Add Venue
+{% endblock  %}
+
+{% block content %}
+<center>
+    <br>
+    <h1>ADD VENUE</h1>
+    <br>
+    {% if submit %}
+    Venue Added successfully
+    {% else %}
+        <form action="" method='post'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" value="Submit" class="btn btn-light">SUBMIT</button>
+        </form>
+    {% endif %}
+            
+</center>
+
+{% endblock  %}

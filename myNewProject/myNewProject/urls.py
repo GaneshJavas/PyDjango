@@ -27,6 +27,7 @@ urlpatterns = [
     path('contact/', views.contact_page, name='contact'),
     # this is for routing for pokemon application urls
     path('pokemon/', include('pokemon.urls')),
+    path('ems/', include('ems.urls')),
 
     path("__reload__/", include("django_browser_reload.urls")),
     

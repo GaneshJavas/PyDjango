@@ -1,0 +1,38 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+    Events
+{% endblock  %}
+
+{% block content %}
+    <br>
+    {% for event in events %}
+        <div class="card">
+            <div class="card-header">
+                {{event.name}}
+            </div>
+            
+            <div class="card-body">
+                <h3 class="card-title">Venue: {{event.venue}}</h3>
+            <blockquote class="blockquote mb-0">
+                
+                    <li>Event Date: {{event.event_date}}</li>
+                    <li>Description: {{event.description}}</li>
+                    <li>Website: {{event.venue.web}}</li>
+                    <li>Phone No. : {{event.venue.phone_no}}</li>
+                    <li>Attendees: 
+                        <ul>
+                            {% for attendee in event.attendees.all %}
+                                <li>&emsp; &emsp;{{attendee}}</li>
+                            {% endfor %}
+                        </ul>    
+                        
+                    </li>
+                    
+            </blockquote>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+    
+{% endblock  %}

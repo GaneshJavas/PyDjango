@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pokemon',
     'tailwind',
     'theme',
+    'ems',
     'django_browser_reload',
 ]
 
