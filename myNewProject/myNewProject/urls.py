@@ -28,6 +28,8 @@ urlpatterns = [
     # this is for routing for pokemon application urls
     path('pokemon/', include('pokemon.urls')),
     path('ems/', include('ems.urls')),
+    path('members/', include('django.contrib.auth.urls')),
+    path('members/', include('members.urls')),
 
     path("__reload__/", include("django_browser_reload.urls")),
     

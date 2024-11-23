@@ -1,0 +1,30 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+    Venue Details
+{% endblock  %}
+
+{% block content %}
+<br>
+<div class="card" style="font-family: Georgia, serif;">
+    <div class="card-header text-center display-4 text-warning">
+        Details Of Venue
+    </div>
+    
+    <div class="card-body">
+        <h3 class="card-title display-6 text-primary">Venue: {{venue.name}}</h3>
+    <blockquote class="blockquote mb-0" >
+        
+            <li><strong>Venue Address : </strong>{{venue.address}}</li>
+            <li><strong>Zip Code : </strong>{{venue.zip_code}}</li>
+            <li><strong>Website : </strong>{{venue.web}}</li>
+            <li><strong>Phone No. : </strong>{{venue.phone_no}}</li>
+            <li><strong>Email ID : </strong>{{venue.email_id}}</li>
+            
+            
+    </blockquote>
+    </div>
+</div>
+<br>
+
+{% endblock  %}

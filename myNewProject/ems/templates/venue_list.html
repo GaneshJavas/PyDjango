@@ -1,0 +1,36 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+    Venues
+{% endblock  %}
+
+{% block content %}
+    <br>
+    
+        <div class="card">
+            <div class="card-header">
+                <h2>List Of Venues</h2>
+            </div>
+            
+            <div class="card-body">
+                <h3 class="card-title">
+                    {% for venue in venues %}
+                    <li>
+                        <a href="{% url "venue-details" venue.id%}" onmouseover="this.style.color='orange';" onmouseout="this.style.color='';"> {{venue.name}}</a>
+                            
+                            
+                    </li>
+                    {% endfor %}
+                </h3>
+            <blockquote class="blockquote mb-0">
+                
+                    
+                    
+                    
+            </blockquote>
+            </div>
+        </div>
+        <br>
+    
+    
+{% endblock  %}

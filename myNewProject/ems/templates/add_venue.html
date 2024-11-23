@@ -7,12 +7,12 @@
 {% block content %}
 <center>
     <br>
-    <h1>ADD VENUE</h1>
-    <br>
+    <h1 class="display-4 text-danger" style="font-family: Georgia, serif;" >ADD VENUE</h1>
+    
     {% if submit %}
     Venue Added successfully
     {% else %}
-        <form action="" method='post'>
+        <form action="" method=POST>
             {% csrf_token %}
             {{form.as_p}}
             <button type="submit" value="Submit" class="btn btn-light">SUBMIT</button>
